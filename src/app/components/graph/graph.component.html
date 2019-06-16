@@ -1,0 +1,16 @@
+<div class="graph">
+	<div class="graph-head">
+		<div class="graph-head__left">
+			Depth <br> Meters
+		</div>
+		<div class="graph-head__right">
+			<button class="btn ac" (click)="selectCurve('AC.US/F')">AC.US/F</button>
+			<button class="btn acs" (click)="selectCurve('ACS.US/F')">ACS.US/F</button>
+			<button class="btn gr" (click)="selectCurve('GR.GAPI')">GR.GAPI</button>
+			<button class="btn rop" (click)="selectCurve('ROP.M/H')">ROP.M/H</button>
+		</div>
+	</div>
+	<div class="graph-content" *ngIf="canvasHeight">
+		<canvas class="canvas" id="graphCanvas" width="820" [height]="canvasHeight"></canvas>
+	</div>
+</div>
